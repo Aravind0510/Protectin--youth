@@ -55,7 +55,7 @@ Promote a balanced diet and regular physical activity. Encourage adequate sleep 
 ## home Page
 ![home](https://github.com/Aravind0510/Protectin--youth/assets/106546654/8edee983-0347-411c-9cbc-1930a3f07cdf)
 
-## loin Page
+## login Page
 ![login](https://github.com/Aravind0510/Protectin--youth/assets/106546654/4b52ae0b-d7dc-48d2-90ec-373f587094c2)
 
 ## signup app Page
