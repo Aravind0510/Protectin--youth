@@ -9,7 +9,7 @@ A free HTML-CSS-JavaScript template of a community discussion website.
 
 ---
 
-![](https://protecting-youth.netlify.app/)
+![Screenshot (210)](https://github.com/Aravind0510/Protectin--youth/assets/106546654/7542265a-f074-4938-9154-e07482209baf)
 
 ## Posts Page
 
