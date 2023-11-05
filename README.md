@@ -1,4 +1,4 @@
-# Free Forum Template
+# Protecting youth
 A free HTML-CSS-JavaScript template of a community discussion website.
 
 ### [Watch Tutorial On Youtube.](https://youtu.be/knGk9aUr4Do)
@@ -9,7 +9,7 @@ A free HTML-CSS-JavaScript template of a community discussion website.
 
 ---
 
-![](https://i.ibb.co/qWcy2zH/forums-home-page.png)
+![](https://protecting-youth.netlify.app/)
 
 ## Posts Page
 
