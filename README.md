@@ -16,7 +16,7 @@ Promote a balanced diet and regular physical activity. Encourage adequate sleep 
 
 ### [Watch Our Project Demo On Youtube.](https://youtu.be/knGk9aUr4Do)
 
-# Our App Screenshots
+# Website Screenshots
 
 ## Home Page
 
@@ -48,20 +48,20 @@ Promote a balanced diet and regular physical activity. Encourage adequate sleep 
 
 ![Screenshot (215)](https://github.com/Aravind0510/Protectin--youth/assets/106546654/a012cdbb-66b9-4dd3-aeab-c0882cd7b079)
 
-## Flutter app Page
+# Our App Screenshots
 
 ---
 
-# home Page
+## home Page
 ![home](https://github.com/Aravind0510/Protectin--youth/assets/106546654/8edee983-0347-411c-9cbc-1930a3f07cdf)
 
-# loin Page
+## loin Page
 ![login](https://github.com/Aravind0510/Protectin--youth/assets/106546654/4b52ae0b-d7dc-48d2-90ec-373f587094c2)
 
-# signup app Page
+## signup app Page
 ![sign](https://github.com/Aravind0510/Protectin--youth/assets/106546654/25dfeb6c-eeca-41ae-aa0c-be9ddd462d59)
 
-# physical health support app Page
+## physical health support app Page
 ![py](https://github.com/Aravind0510/Protectin--youth/assets/106546654/1467df92-87dc-4b00-b5f7-e979660a3c2e)
 
 
