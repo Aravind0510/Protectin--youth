@@ -1,13 +1,14 @@
 # Protecting youth
 This is our project for a  Hackathon conducted by Devpost . Theme of this project is Protecting-youth , we give solution as a app .
 this app give mental support , physical health support , Academic counselling , online safety, and community forums. 
+
 1.Mental health support -   We offer access to mental health resources, including counseling services, hotlines, and peer support groups We encourage open conversations about mental health and work to reduce it.
 
-	2. Online safety -  We Provide Teach digital literacy and responsible online behavior to help young people navigate the internet safely and Promote cybersecurity practices to protect against online threats and cyberbullying.
+2. Online safety -  We Provide Teach digital literacy and responsible online behavior to help young people navigate the internet safely and Promote cybersecurity practices to protect against online threats and cyberbullying.
 
-	3. Physical health  - Promote a balanced diet and regular physical activity. Encourage adequate sleep and stress management practices.
+3. Physical health  - Promote a balanced diet and regular physical activity. Encourage adequate sleep and stress management practices.
 
-	4.Education and career guidance - We offer career counseling and guidance to help youth make informed choices about their future and Support skill development and job readiness.
+4.Education and career guidance - We offer career counseling and guidance to help youth make informed choices about their future and Support skill development and job readiness.
 
 ### [Watch Tutorial On Youtube.](https://youtu.be/knGk9aUr4Do)
 
@@ -56,7 +57,7 @@ this app give mental support , physical health support , Academic counselling , 
 # sign app Page
 ![sign](https://github.com/Aravind0510/Protectin--youth/assets/106546654/25dfeb6c-eeca-41ae-aa0c-be9ddd462d59)
 
-# physical app Page
+# physical health support app Page
 ![py](https://github.com/Aravind0510/Protectin--youth/assets/106546654/1467df92-87dc-4b00-b5f7-e979660a3c2e)
 
 
