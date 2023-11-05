@@ -1,5 +1,6 @@
 # Protecting youth
-A free HTML-CSS-JavaScript template of a community discussion website.
+This is our project for a  Hackathon conducted by Devpost . Theme of this project is Protecting-youth , we give solution as a app .
+this app give mental support , physical health support , Academic counselling , online safety, and community forums. 
 
 ### [Watch Tutorial On Youtube.](https://youtu.be/knGk9aUr4Do)
 
@@ -11,16 +12,41 @@ A free HTML-CSS-JavaScript template of a community discussion website.
 
 ![Screenshot (210)](https://github.com/Aravind0510/Protectin--youth/assets/106546654/7542265a-f074-4938-9154-e07482209baf)
 
-## Posts Page
+## Mental support page
 
 ---
 
-![](https://i.ibb.co/ZLb6WvG/posts-page.png)
+![Screenshot (213)](https://github.com/Aravind0510/Protectin--youth/assets/106546654/dfeaf4df-aa9f-4945-bc9d-7d35ef69f5ca)
 
-## Detail Page
+## Community Page
 
 ---
 
-![](https://i.ibb.co/wWrw8Dj/detail-page.png)
+![Screenshot (212)](https://github.com/Aravind0510/Protectin--youth/assets/106546654/fcd7f002-7470-4617-ab37-3fb4e35e3540)
+
+## Dashboard Page
+
+---
+
+![Screenshot (214)](https://github.com/Aravind0510/Protectin--youth/assets/106546654/0f29fce9-6016-4d03-967f-add3a32df859)
+
+## Visualize Page
+
+---
+
+![Screenshot (215)](https://github.com/Aravind0510/Protectin--youth/assets/106546654/a012cdbb-66b9-4dd3-aeab-c0882cd7b079)
+
+## Flutter app Page
+
+---
+
+![home](https://github.com/Aravind0510/Protectin--youth/assets/106546654/8edee983-0347-411c-9cbc-1930a3f07cdf)
+
+![login](https://github.com/Aravind0510/Protectin--youth/assets/106546654/4b52ae0b-d7dc-48d2-90ec-373f587094c2)
+
+![sign](https://github.com/Aravind0510/Protectin--youth/assets/106546654/25dfeb6c-eeca-41ae-aa0c-be9ddd462d59)
+
+![py](https://github.com/Aravind0510/Protectin--youth/assets/106546654/1467df92-87dc-4b00-b5f7-e979660a3c2e)
+
 
 
