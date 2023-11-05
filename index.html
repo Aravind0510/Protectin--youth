@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+
+<html lang="en" class="sr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protecting youth</title>
+    <style>
+        #home {
+            padding-left: 100px;
+            font-size: larger;
+        }
+    </style>
+    
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body
+    x-data="{ page: &#39;home&#39;, &#39;loaded&#39;: true, &#39;darkMode&#39;: true, &#39;stickyMenu&#39;: false, &#39;navigationOpen&#39;: false, &#39;scrollTop&#39;: false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem(&#39;darkMode&#39;));
+         $watch(&#39;darkMode&#39;, value =&gt; localStorage.setItem(&#39;darkMode&#39;, JSON.stringify(value)))"
+    :class="{&#39;a tf&#39;: darkMode === true}" style="height: 100%;" class="">
+
+    <div x-show="loaded"
+        x-init="window.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {setTimeout(() =&gt; loaded = false, 500)})"
+        class="f l i z mc qb ee ge id uf" style="display: none;">
+        <div class="sc xb xe xd if mf qf sf"></div>
+    </div>
+
+
+    <div class="f i l -ud-z-10 qb hc rc ee ie">
+        <span class="hd hc dg wl qb ud"></span>
+        <span class="hd hc dg wl qb vd"></span>
+        <span class="hd hc dg wl qb wd"></span>
+    </div>
+
+
+    <header class="f l i rc y ph uf tl xj qh zj fk" :class="{ &#39;uf tl xj qh zj fk&#39; : stickyMenu }"
+        @scroll.window="stickyMenu = (window.pageYOffset &gt; 20) ? true : false">
+        <div class="ba md _g nn 2xl:ud-px-0 do ee he h">
+            <div class="rc ko/4 qb ee he">
+                <a href="#">
+                    <img class="nl" src="img/logo2.png" alt="Logo Light">
+                    <img class="ub ml" src="img/logo2.png" alt="Logo Dark">
+                </a>
+
+                <button class="eo ob" @click="navigationOpen = !navigationOpen">
+                    <span class="ob h yd dd gc">
+                        <span class="ob g rc hc">
+                            <span class="ob h i l tf ul df ed ic da hk gk _j fd ak"
+                                :class="{ &#39;fd ak&#39;: !navigationOpen }"></span>
+                            <span class="ob h i l tf ul df ed ic da hk gk bk fd pr"
+                                :class="{ &#39;fd pr&#39;: !navigationOpen }"></span>
+                            <span class="ob h i l tf ul df ed ic da hk gk ck fd dk"
+                                :class="{ &#39;fd dk&#39;: !navigationOpen }"></span>
+                        </span>
+                        <span class="ob g rc hc td">
+                            <span class="ob tf ul df hk gk ak g r i gd hc jc _j"
+                                :class="{ &#39;jc _j&#39;: !navigationOpen }"></span>
+                            <span class="ob tf ul df hk gk pr g l top-2.5 rc ic jc ck"
+                                :class="{ &#39;jc ck&#39;: !navigationOpen }"></span>
+                        </span>
+                    </span>
+                </button>
+
+            </div>
+            <div id="home" class="rc lg:w-3/4 jc fo e un do ee he"
+                :class="{ &#39;d uf sl sj kc oc we _e lb ug&#39;: navigationOpen }">
+                <nav>
+                    <ul class="qb ro be po qe dp">
+                        <li><a href="index.html" target="_blank" class="bl hj"
+                                :class="{ &#39;hj&#39;: page === &#39;home&#39; }">Home</a></li>
+                        <li><a href="#" class="bl">Features</a></li>
+                        <li class="b h" x-data="{ dropdown: false }">
+                            <a href="#" class="bl qb ee he oe" @click.prevent="dropdown = !dropdown"
+                                :class="{ &#39;hj&#39;: page === &#39;blog-grid&#39; || page === &#39;blog-single&#39; || page === &#39;signin&#39; || page === &#39;signup&#39; || page === &#39;404&#39; }">
+                                Services
+                                <svg :class="{ &#39;lg&#39;: dropdown }" class="ng ll uc lc yd"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                    </path>
+                                </svg>
+                            </a>
+
+                            <ul class="dropdown" :class="{ &#39;qb&#39;: dropdown }">
+                                <li><a href="mentalsup.html" target="_blank"
+                                        class="bl" :class="{ &#39;hj&#39;: page === &#39;blog-grid&#39; }">Mental Health
+                                        Support</a></li>
+                                <li><a href="#" class="bl"
+                                        :class="{ &#39;hj&#39;: page === &#39;blog-single&#39; }">Online Safety</a></li>
+                                <li><a href="#" class="bl"
+                                        :class="{ &#39;hj&#39;: page === &#39;signin&#39; }">Education and career
+                                        guidance</a></li>
+                                <li><a href="#" class="bl" :class="{ &#39;hj&#39;: page === &#39;signup&#39; }">School
+                                        student protection</a></li>
+                                <li><a href="#" class="bl" :class="{ &#39;hj&#39;: page === &#39;404&#39; }">Physical
+                                        Health</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="forums.html"  class="bl">Community</a></li>
+                        <li><a href="dashboard.html" target="_blank" class="bl">Dashboard</a></li>
+                    </ul>
+                </nav>
+                <div class="qb ee se ka bo">
+                    <div class="mb g vn top-1 t d" :class="navigationOpen ? &#39;d&#39; : &#39;d&#39;">
+                        <label class="ob m-0 h">
+                            <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode"
+                                class="yd rc hc lj g i x aa">
+                            <img class="nl" src="img/icon-sun.svg" alt="Sun">
+                            <img class="ub ml" src="img/icon-moon.svg"
+                                alt="Moon">
+                        </label>
+                    </div>
+                    <a href="signin.html" target="_blank" class="gj wi bj bl">Sign
+                        In</a>
+                    <a href="#" class="qb ee ge wf zk hk ek fj wi xe bh dh">Download</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="#home" class="th rn dr uh er ve">
+            <div class="ba md _g nn 2xl:ud-px-0">
+                <div class="qb ro to gq">
+                    <div class="animate_left vm/2" data-sr-id="54"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <h4 class="ej dm oi bj ra">🔥 Guardians of Tomorrow's Leaders</h4>
+                        <h1 class="ej dm ri jr cj ga">
+                            Defending Youth
+                            <span class="pb h ik jk kk pk nk sk im before:-ud-z-1"> A Shared Responsibility</span>
+                            for SafetyCompass
+                        </h1>
+                        <p>A world that values and protects its youth secures its own future.</p>
+                        <div class="ma">
+                            <form action="https://formbold.com/s/unique_form_id" method="POST">
+                                <div class="qb de qe">
+                                    <input type="text" placeholder="Enter your email address"
+                                        class="tl hf nf pl pj gm xe hl fl pm bh xg">
+                                    <button class="qb tf xk rl fj xe hk ek dh bh mm">Get Started</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="animate_right vm/2 ub co" data-sr-id="60"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="h 2xl:-ud-mr-7.5">
+                            <img src="img/shape-01.png" alt="shape"
+                                class="g -ud-left-11.5 i">
+                            <img src="img/shape-02.svg" alt="shape"
+                                class="g j k">
+                            <img src="img/shape-03.svg" alt="shape"
+                                class="g -ud-right-6.5 k">
+                            <div>
+                                <img class="nl qj" src="img/hero5.png" alt="Hero">
+                                <img class="ub ml qj" src="img/hero5.png" alt="Hero">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <section id="features" class="zg ep oq">
+            <div class="ba nd _g nn pq">
+
+                <div class="animate_top mi ba"
+                    x-data="{ sectionTitle: `SafetyCompass FEATURES`, sectionSubtitle: `Our Software&#39;s Core Features`, sectionTitlePara: ` Our app is your partner in creating a secure digital space for the next generation.`}"
+                    data-sr-id="8"
+                    style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                    <div class="eg sl ol pl pb xe oh hh sa">
+                        <h4 x-text="sectionTitle" class="bj yi ej dm">SafetyCompass FEATURES</h4>
+                    </div>
+                    <h2 x-text="sectionSubtitle" class="cj ri nr ej dm ym/5 zp/2 ba sa">Our Software's Core Features
+                    </h2>
+                    <p class="ba ym/5 mo/5 aq" x-text="sectionTitlePara">Our app is your partner in creating a secure
+                        digital space for the next generation.</p>
+                </div>
+
+                <div class="tb _d bn oo le eq ua xn vp">
+
+                    <div class="animate_top hf of rj ye ug lq yj el km pl sl" data-sr-id="9"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="qb ee ge ze wf sc xb">
+                            <img src="img/education.png" alt="Icon">
+                        </div>
+                        <h3 class="aj qi kr ej dm ia ga">Mental Health Support</h3>
+                        <p>We offer access to mental health resources, including counseling services, hotlines, and peer
+                            support groups & Encourage open conversations about mental health and work to reduce it.</p>
+                    </div>
+
+
+                    <div class="animate_top hf of rj ye ug lq yj el km pl sl" data-sr-id="10"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="qb ee ge ze wf sc xb">
+                            <img src="img/online.png" alt="Icon">
+                        </div>
+                        <h3 class="aj qi kr ej dm ia ga">Online Safety</h3>
+                        <p>We Provide Teach digital literacy and responsible online behavior to help young people
+                            navigate the internet safely and Promote cybersecurity practices to protect against online
+                            threats and cyberbullying.</p>
+                    </div>
+
+
+                    <div class="animate_top hf of rj ye ug lq yj el km pl sl" data-sr-id="11"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="qb ee ge ze wf sc xb">
+                            <img src="img/career-promotion.png" alt="Icon">
+                        </div>
+                        <h3 class="aj qi kr ej dm ia ga">Education & Career guidance</h3>
+                        <p>We offer career counseling and guidance to help youth make informed choices about their
+                            future and Support skill development and job readiness.</p>
+                    </div>
+
+
+                    <div class="animate_top hf of rj ye ug lq yj el km pl sl" data-sr-id="12"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="qb ee ge ze wf sc xb">
+                            <img src="img/education (1).png" alt="Icon">
+                        </div>
+                        <h3 class="aj qi kr ej dm ia ga">School students Protection</h3>
+                        <p>Provide comprehensive and age-appropriate education on topics such as mental health,
+                            bullying, substance abuse, and sexual health & Promote media literacy to help youth
+                            critically evaluate the information and content they encounter online.</p>
+                    </div>
+
+
+                    <div class="animate_top hf of rj ye ug lq yj el km pl sl" data-sr-id="13"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="qb ee ge ze wf sc xb">
+                            <img src="img/medical.png" alt="Icon">
+                        </div>
+                        <h3 class="aj qi kr ej dm ia ga">Physical Health</h3>
+                        <p>Promote a balanced diet and regular physical activity.
+                            Encourage adequate sleep and stress management practices.</p>
+                    </div>
+
+
+                    <div class="animate_top hf of rj ye ug lq yj el km pl sl" data-sr-id="14"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="qb ee ge ze wf sc xb">
+                            <img src="img/icon-06.svg" alt="Icon">
+                        </div>
+                        <h3 class="aj qi kr ej dm ia ga">Regular Updates</h3>
+                        <p>Advocate for policies and legislation that protect youth rights and well-being, such as
+                            age-appropriate labor laws, safe working conditions, and laws against child exploitation.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+ 
+        <section class="zg ep oq _g nn 2xl:ud-px-0 ve">
+            <div class="ba md dh pn vq kh wq ye fg gg hg xl yl _l sl cm">
+                <div class="qb de en fn gn te hn">
+                    <div class="animate_left zm ko/2" data-sr-id="57"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <h2 class="ej dm ri or cj sa xc/12">Join With Us Today &amp; Incrud-ease Your Productivity</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec
+                            vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+                    </div>
+                    <div class="animate_right lo" data-sr-id="63"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="qb ee fe cq">
+                            <img src="img/shape-06.png" alt="Saly" class="ub yp">
+                            <a href="#"
+                                class="sb ee je bj fj em tf ul xe yg xg _k mm">
+                                Sign up free
+                                <img src="img/icon-arrow-dark.svg" alt="Arrow"
+                                    class="nl">
+                                <img src="img/icon-arrow-light.svg" alt="Arrow"
+                                    class="ub ml">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="uh pp cr ve">
+            <div class="ba od _g nn pq h">
+                <div class="g -ud-bottom-7.5 -ud-z-1">
+                    <img src="img/shape-dotted-light.svg" alt="Dotted"
+                        class="nl">
+                    <img src="img/shape-dotted-light.svg" alt="Dotted"
+                        class="ub ml">
+                </div>
+                <div class="qb de en fn te gq">
+                    <div class="animate_left _m/5 ko/2" data-sr-id="58"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <h4 class="ej dm bj dj">OUR FAQS</h4>
+                        <h2 class="h cj ej dm ri jr xa">
+                            Frequently Asked
+                            <span class="pb h ik jk kk pk nk tk im before:-ud-z-1">Questions</span>
+                        </h2>
+                        <a href="#" class="qb ee je ej dm eb">
+                            Know More
+                            <img class="nl" src="img/icon-arrow-light.svg"
+                                alt="Arrow">
+                            <img class="ub ml" src="img/icon-arrow-dark.svg"
+                                alt="Arrow">
+                        </a>
+                    </div>
+                    <div class="animate_right xm/5 ko/2" data-sr-id="64"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <div class="uf sl ol pl mj ye" x-data="{selected:0}">
+                            <div class="qb be kf nf pl">
+                                <h4 @click="selected !== 0 ? selected = 0 : selected = null"
+                                    class="yd qb he ee bj ui ej dm mh hp xg ip">
+                                    What does our app app?
+                                    <img src="img/icon-plus-light.svg" alt="plus"   
+                                        class="nl ub" :class="selected == 0 ? &#39;ub&#39; : &#39;ob&#39;">
+                                    <img src="img/icon-minus-light.svg"
+                                        alt="minus" class="nl ob" :class="selected == 0 ? &#39;ob&#39; : &#39;ub&#39;">
+                                    <img src="img/icon-plus-dark.svg" alt="plus"
+                                        class="ub ml nl" :class="selected == 0 ? &#39;nl&#39; : &#39;ml&#39;">
+                                    <img src="img/icon-minus-dark.svg"
+                                        alt="minus" class="ub ml" :class="selected == 0 ? &#39;ml&#39; : &#39;nl&#39;">
+                                </h4>
+                                <p x-show="selected == 0" class="mh hp xg ip lf nf pl">
+                                    Youth protection app is a software application designed to help parents and
+                                    guardians safeguard their children's online experiences. It typically includes
+                                    features like content filtering, screen time management, location tracking, and
+                                    monitoring of digital activities to ensure a safer online environment.
+                                </p>
+                            </div>
+                            <div class="qb be kf nf pl">
+                                <h4 @click="selected !== 1 ? selected = 1 : selected = null"
+                                    class="yd qb he ee bj ui ej dm mh hp xg ip">
+                                    How can an online safety app benefit me as a parent or guardian?
+                                    <img src="img/icon-plus-light.svg" alt="plus"
+                                        class="nl ob" :class="selected == 1 ? &#39;ub&#39; : &#39;ob&#39;">
+                                    <img src="img/icon-minus-light.svg"
+                                        alt="minus" class="nl ub" :class="selected == 1 ? &#39;ob&#39; : &#39;ub&#39;">
+                                    <img src="img/icon-plus-dark.svg" alt="plus"
+                                        class="ub ml" :class="selected == 1 ? &#39;nl&#39; : &#39;ml&#39;">
+                                    <img src="img/icon-minus-dark.svg"
+                                        alt="minus" class="ub ml nl"
+                                        :class="selected == 1 ? &#39;ml&#39; : &#39;nl&#39;">
+                                </h4>
+                                <p x-show="selected == 1" class="mh hp xg ip lf nf pl" style="display: none;">
+                                    These apps offer peace of mind by allowing you to monitor your child's digital
+                                    activities, limit screen time, block inappropriate content, and track their
+                                    whereabouts, helping you ensure their safety and responsible internet usage.
+                                </p>
+                            </div>
+                            <div class="qb be">
+                                <h4 @click="selected !== 2 ? selected = 2 : selected = null"
+                                    :class="{&#39;yd qb he ee bj ui ej dm mh hp xg ip&#39;: true, &#39;ef&#39;: selected != 2}"
+                                    class="yd qb he ee bj ui ej dm mh hp xg ip ef">
+                                    Is it legal to use such apps to monitor my child's online activities?
+                                    <img src="img/icon-plus-light.svg" alt="plus"
+                                        class="nl ob" :class="selected == 2 ? &#39;ub&#39; : &#39;ob&#39;">
+                                    <img src="img/icon-minus-light.svg"
+                                        alt="minus" class="nl ub" :class="selected == 2 ? &#39;ob&#39; : &#39;ub&#39;">
+                                    <img src="img/icon-plus-dark.svg" alt="plus"
+                                        class="ub ml" :class="selected == 2 ? &#39;nl&#39; : &#39;ml&#39;">
+                                    <img src="img/icon-minus-dark.svg"
+                                        alt="minus" class="ub ml nl"
+                                        :class="selected == 2 ? &#39;ml&#39; : &#39;nl&#39;">
+                                </h4>
+                                <p x-show="selected == 2"
+                                    :class="{&#39;mh hp xg ip lf nf pl&#39;: true, &#39;ef&#39;: selected == 2}"
+                                    class="mh hp xg ip lf nf pl" style="display: none;">
+                                    Yes, it is generally legal for parents or guardians to use online safety apps to
+                                    monitor their child's online activities, as long as it is done for the purpose of
+                                    ensuring their safety and is within legal and privacy guidelines
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  
+
+        <section id="support" class="_g nn 2xl:ud-px-0">
+            <div class="ba md h fi tp gr dh kp yq ve">
+                <div class="g -ud-z-1 ye l i rc dc/3 fg gg hg xl zl am"></div>
+                <div class="g -ud-z-1 o l rc ec/3">
+                    <img src="img/shape-dotted-light.svg" alt="Dotted"
+                        class="nl">
+                    <img src="img/shape-dotted-dark.svg" alt="Dotted"
+                        class="ub ml">
+                </div>
+                <div class="qb de en ce dn te jq gn">
+                    <div class="animate_top rc xm/5 mo/4 mj ye uf tl ol pl ug nq" data-sr-id="40"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <h2 class="ej dm ri mr aj _a">Send a message</h2>
+                        <form action="https://formbold.com/s/unique_form_id" method="POST">
+                            <div class="qb be po so le bp ea">
+                                <input type="text" placeholder="Full name"
+                                    class="rc ko/2 bg kf nf pl jl gl qm il rm gi">
+                                <input type="email" placeholder="Email address"
+                                    class="rc ko/2 bg kf nf pl jl gl qm il rm gi">
+                            </div>
+                            <div class="qb be po so le bp ab">
+                                <input type="text" placeholder="Subject" class="rc ko/2 bg kf nf pl jl gl qm il rm gi">
+                                <input type="text" placeholder="Phone number"
+                                    class="rc ko/2 bg kf nf pl jl gl qm il rm gi">
+                            </div>
+                            <div class="qb ib">
+                                <textarea placeholder="Message" rows="4"
+                                    class="rc bg kf nf pl jl gl qm il rm"></textarea>
+                            </div>
+                            <div class="qb de cq re kq">
+                                <div>
+                                    <label for="supportCheckbox" class="rd qb yd zd bl">
+                                        <div class="h">
+                                            <input type="checkbox" id="supportCheckbox" class="c">
+                                            <div class="box wa kb qb fc bd ee ge cf hf nf pl">
+                                                <span class="lj">
+                                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none"
+                                                        class="og">
+                                                        <path
+                                                            d="M10.0915 0.951972L10.0867 0.946075L10.0813 0.940568C9.90076 0.753564 9.61034 0.753146 9.42927 0.939309L4.16201 6.22962L1.58507 3.63469C1.40401 3.44841 1.11351 3.44879 0.932892 3.63584C0.755703 3.81933 0.755703 4.10875 0.932892 4.29224L0.932878 4.29225L0.934851 4.29424L3.58046 6.95832C3.73676 7.11955 3.94983 7.2 4.1473 7.2C4.36196 7.2 4.55963 7.11773 4.71406 6.9584L10.0468 1.60234C10.2436 1.4199 10.2421 1.1339 10.0915 0.951972ZM4.2327 6.30081L4.2317 6.2998C4.23206 6.30015 4.23237 6.30049 4.23269 6.30082L4.2327 6.30081Z"
+                                                            stroke-width="0.4"></path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        By clicking Checkbox, you agree to use our “Form” terms And consent cookie usage
+                                        in browser.
+                                    </label>
+                                </div>
+                                <button class="sb ee je tf xk hk ek rl bj fj xe xg yg">
+                                    Send Message
+                                    <svg class="ig" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
+                                            fill=""></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="animate_top rc _m/5 no ln hr" data-sr-id="41"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <h2 class="ej dm ri mr aj ab">Find us</h2>
+                        <div class="fa 5">
+                            <h4 class="bj ej dm ui sa">Our Loaction</h4>
+                            <p>29 Maryam Street , Madagadipet, Puducherry , India</p>
+                        </div>
+                        <div class="fa 5">
+                            <h4 class="bj ej dm ui sa">Email Address</h4>
+                            <p><a href="#">safetycompass@gmail.com</a></p>
+                        </div>
+                        <div>
+                            <h4 class="bj ej dm ui sa">Phone Number</h4>
+                            <p><a href="#">+91 6383749354</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+    </main>
+
+    <footer class="uf sl lf nf pl">
+        <div class="ba md _g nn 2xl:ud-px-0">
+
+            <div class="zg ep">
+                <div class="qb de so te cp">
+                    <div class="animate_top yc/2 ko/4" data-sr-id="46"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                        <a href="#">
+
+                            <p class="ta na">Feel free to contact us ...</p>
+                            <p class="dj tracking-[5px] yi fb">contact</p>
+                            <a href="#" class="ej dm bj zi">safetycompass@gmail.com</a>
+                    </div>
+                    <div class="rc ho/3 _p/12 qb be dn gn te hn">
+                        <div class="animate_top" data-sr-id="47"
+                            style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                            <h4 class="bj ej dm _i pa">Quick Links</h4>
+                            <ul>
+                                <li><a href="#" class="pb bl la">Home</a></li>
+                                <li><a href="#" class="pb bl la">Service</a></li>
+                                <li><a href="#" class="pb bl la">Support</a></li>
+                                <li><a href="#" class="pb bl la">Community</a></li>
+                            </ul>
+                        </div>
+                        <div class="animate_top" data-sr-id="48"
+                            style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                            <h4 class="bj ej dm _i pa">Support</h4>
+                            <ul>
+                                <li><a href="#" class="pb bl la">Company</a></li>
+                                <li><a href="#" class="pb bl la">Press media</a></li>
+                                <li><a href="#" class="pb bl la">Our Blog</a></li>
+                                <li><a href="#" class="pb bl la">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="animate_top" data-sr-id="49"
+                            style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                            <h4 class="bj ej dm _i pa">Newsletter</h4>
+                            <p class="sa cd">Subscribe to receive future updates</p>
+                            <form action="#">
+                                <div class="h">
+                                    <input type="text" placeholder="Email address"
+                                        class="rc tl hf nf pl wj gm xe hl fl pm yg xg">
+                                    <button class="g j pg">
+                                        <svg class="mg bm al" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_48_1487)">
+                                                <path
+                                                    d="M3.1175 1.17318L18.5025 9.63484C18.5678 9.67081 18.6223 9.72365 18.6602 9.78786C18.6982 9.85206 18.7182 9.92527 18.7182 9.99984C18.7182 10.0744 18.6982 10.1476 18.6602 10.2118C18.6223 10.276 18.5678 10.3289 18.5025 10.3648L3.1175 18.8265C3.05406 18.8614 2.98262 18.8792 2.91023 18.8781C2.83783 18.8769 2.76698 18.857 2.70465 18.8201C2.64232 18.7833 2.59066 18.7308 2.55478 18.6679C2.51889 18.6051 2.50001 18.5339 2.5 18.4615V1.53818C2.50001 1.46577 2.51889 1.39462 2.55478 1.33174C2.59066 1.26885 2.64232 1.2164 2.70465 1.17956C2.76698 1.14272 2.83783 1.12275 2.91023 1.12163C2.98262 1.12051 3.05406 1.13828 3.1175 1.17318ZM4.16667 10.8332V16.3473L15.7083 9.99984L4.16667 3.65234V9.16651H8.33333V10.8332H4.16667Z"
+                                                    fill=""></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_48_1487">
+                                                    <rect width="20" height="20" fill="white"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lf nf pl qb de be po ee ge so qe cp ph">
+                <div class="animate_top" data-sr-id="50"
+                    style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                    <ul class="qb ee te">
+                        <li><a href="#" class="bl">English</a></li>
+                        <li><a href="#" class="bl">Privacy Policy</a></li>
+                        <li><a href="#" class="bl">Support</a></li>
+                    </ul>
+                </div>
+                <div class="animate_top" data-sr-id="51"
+                    style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                    <p>© 2025 Safetycompass. All rights reserved</p>
+                </div>
+                <div class="animate_top" data-sr-id="52"
+                    style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 2.8s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                    <ul class="qb ee qe">
+                        <li>
+                            <a href="#">
+                                <svg class="kg al yj ek" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_48_1499)">
+                                        <path
+                                            d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z"
+                                            fill=""></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0_48_1499">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                        </clippath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="kg al yj ek" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_48_1502)">
+                                        <path
+                                            d="M22.162 5.65593C21.3985 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4803 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75098 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.345 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.2641 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.2301 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z"
+                                            fill=""></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0_48_1502">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                        </clippath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/#">
+                                <svg class="kg al yj ek" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_48_1505)">
+                                        <path
+                                            d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z"
+                                            fill=""></path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0_48_1505">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                        </clippath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="kg al yj ek" width="24" height="24" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_48_1508)">
+                                        <path
+                                            d="M7.443 5.3501C8.082 5.3501 8.673 5.4001 9.213 5.5481C9.70301 5.63814 10.1708 5.82293 10.59 6.0921C10.984 6.3391 11.279 6.6861 11.475 7.1311C11.672 7.5761 11.77 8.1211 11.77 8.7141C11.77 9.4071 11.623 10.0001 11.279 10.4451C10.984 10.8911 10.492 11.2861 9.902 11.5831C10.738 11.8311 11.377 12.2761 11.77 12.8691C12.164 13.4631 12.41 14.2051 12.41 15.0461C12.41 15.7391 12.262 16.3321 12.016 16.8271C11.77 17.3221 11.377 17.7671 10.934 18.0641C10.4528 18.3825 9.92084 18.6165 9.361 18.7561C8.771 18.9051 8.181 19.0041 7.591 19.0041H1V5.3501H7.443ZM7.049 10.8901C7.59 10.8901 8.033 10.7421 8.377 10.4951C8.721 10.2481 8.869 9.8021 8.869 9.2581C8.869 8.9611 8.819 8.6641 8.721 8.4671C8.623 8.2691 8.475 8.1201 8.279 7.9721C8.082 7.8731 7.885 7.7741 7.639 7.7251C7.393 7.6751 7.148 7.6751 6.852 7.6751H4V10.8911H7.05L7.049 10.8901ZM7.197 16.7281C7.492 16.7281 7.787 16.6781 8.033 16.6291C8.28138 16.5819 8.51628 16.4805 8.721 16.3321C8.92139 16.1873 9.08903 16.002 9.213 15.7881C9.311 15.5411 9.41 15.2441 9.41 14.8981C9.41 14.2051 9.213 13.7101 8.82 13.3641C8.426 13.0671 7.885 12.9191 7.246 12.9191H4V16.7291H7.197V16.7281ZM16.689 16.6781C17.082 17.0741 17.672 17.2721 18.459 17.2721C19 17.2721 19.492 17.1241 19.885 16.8771C20.279 16.5801 20.525 16.2831 20.623 15.9861H23.033C22.639 17.1731 22.049 18.0141 21.263 18.5581C20.475 19.0531 19.541 19.3501 18.41 19.3501C17.6864 19.3523 16.9688 19.2179 16.295 18.9541C15.6887 18.7266 15.148 18.3529 14.721 17.8661C14.2643 17.4107 13.9267 16.8498 13.738 16.2331C13.492 15.5901 13.393 14.8981 13.393 14.1061C13.393 13.3641 13.492 12.6721 13.738 12.0281C13.9745 11.4082 14.3245 10.8378 14.77 10.3461C15.213 9.9011 15.754 9.5061 16.344 9.2581C17.0007 8.99416 17.7022 8.85969 18.41 8.8621C19.246 8.8621 19.984 9.0111 20.623 9.3571C21.263 9.7031 21.754 10.0991 22.148 10.6931C22.5499 11.2636 22.8494 11.8998 23.033 12.5731C23.131 13.2651 23.18 13.9581 23.131 14.7491H16C16 15.5411 16.295 16.2831 16.689 16.6791V16.6781ZM19.787 11.4841C19.443 11.1381 18.902 10.9401 18.262 10.9401C17.82 10.9401 17.475 11.0391 17.18 11.1871C16.885 11.3361 16.689 11.5341 16.492 11.7321C16.311 11.9234 16.1912 12.1643 16.148 12.4241C16.098 12.6721 16.049 12.8691 16.049 13.0671H20.475C20.377 12.3251 20.131 11.8311 19.787 11.4841V11.4841ZM15.459 6.2901H20.967V7.6261H15.46V6.2901H15.459Z">
+                                        </path>
+                                    </g>
+                                    <defs>
+                                        <clippath id="clip0_48_1508">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                        </clippath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <button class="ub ee ge jd nc ze sj wf zk f u v _ rb" @click="window.scrollTo({top: 0, behavior: &#39;smooth&#39;})"
+        @scroll.window="scrollTop = (window.pageYOffset &gt; 50) ? true : false" :class="{ &#39;rb&#39; : scrollTop }">
+        <svg class="ig bd fc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+                d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z">
+            </path>
+        </svg>
+    </button>
+
+    <script defer="" src="bundle.js"></script>
+    <script defer="" src="v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+        integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+        data-cf-beacon="{&quot;rayId&quot;:&quot;81c7f37d392c3fa1&quot;,&quot;r&quot;:1,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;9a6015d415bb4773a0bff22543062d3b&quot;}"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--NavBar Section-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#">Posts</a></li>
+                    <li class="nav-item"><a href="forums.html">Forums</a></li>
+                    <li class="nav-item"><a href="detail.html">Detail</a></li>
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">My Forum</div>
+        </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">Everything</option>
+                    <option value="Titles">Titles</option>
+                    <option value="Descriptions">Descriptions</option>
+                </select>
+                <input type="text" name="q" placeholder="search ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    <div class="container">
+        <!--Navigation-->
+        <div class="navigate">
+            <span><a href="">MyForum - Forums</a> >> <a href="">random subforum</a> >> <a href="">random topic</a></span>
+        </div>
+
+        <!--Topic Section-->
+        <div class="topic-container">
+            <!--Original thread-->
+            <div class="head">
+                <div class="authors">Author</div>
+                <div class="content">Topic: random topic (Read 1325 Times)</div>
+            </div>
+
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">Andrew Json</a></div>
+                    <div>Data Analyst</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>45</u></div>
+                    <div>Points: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    Ram: Hey there, fellow Redditors! I'm a bit new to this whole cybersecurity thing. <br>
+                    Can anyone recommend some essential steps to stay safe online?
+                    <br><br>
+                    CyberPro: Welcome to the world of cybersecurity! First things first, make sure you're using strong, <br>
+                    unique passwords for all your accounts. A password manager can help with that.
+                    <br><br>
+                   
+                    SecurityGeek: Absolutely, and enable two-factor authentication (2FA) wherever possible. 
+                    <br>It's a game-changer for added security.
+                    <br>
+                    <div class="comment">
+                        <button onclick="showComment()">Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Comment Area-->
+        <div class="comment-area hide" id="comment-area">
+            <textarea name="comment" id="" placeholder="comment here ... "></textarea>
+            <input type="submit" value="submit">
+        </div>
+
+        <!--Comments Section-->
+        <div class="comments-container">
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">Aravindhan</a></div>
+                    <div>Engineer</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>455</u></div>
+                    <div>Points: <u>4586</u></div>
+                </div>
+                <div class="content">
+                     Rajesh : Thanks for the tips, folks! What about protecting my personal data? 
+                    <br>I've heard a lot about privacy concerns.
+                    <br><br>
+                    PrivacyAdvocate: It's a good question. Start by using a VPN to encrypt your internet 
+                    <br> connection and mask your IP address.
+                    <br>
+                    <br>
+                    CyberPro: Be cautious about what you share online. Avoid oversharing on social media,
+                    <br> and always double-check app permissions.
+
+                    <br>
+                    <br>
+                    <div class="comment">
+                        <button onclick="showReply()">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reply Area-->
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
+            <input type="submit" value="submit">
+        </div>
+
+
+        <!--Another Comment With replies-->
+        <div class="comments-container">
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">Indhumathi</a></div>
+                    <div>Psychologist</div>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/06/13/27/ninja-1027877_960_720.jpg" alt="">
+                    <div>Posts: <u>455</u></div>
+                    <div>Points: <u>4586</u></div>
+                </div>
+                <div class="content">
+                    Kumar: This is super helpful. What about staying safe from phishing attacks?
+                    <br>
+                    <br><br>
+                    TechWhiz: Be skeptical of unsolicited emails or messages. <br>Check for subtle signs of phishing, like mismatched URLs.
+                    <br>
+                    <br>
+                    SecurityGeek: Always verify the sender's email address and think twice before <br>clicking on any links or downloading attachments.
+
+                    <br>
+                    <br>
+                    <div class="comment">
+                        <button onclick="showReply()">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reply Area-->
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="reply" id="" placeholder="reply here ... "></textarea>
+            <input type="submit" value="submit">
+        </div>
+
+        
+
+    </div>
+    <footer>
+        <span>&copy;  SafetyCompass | All Rights Reserved</span>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
