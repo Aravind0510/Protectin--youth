@@ -3,11 +3,8 @@ This is our project for a  Hackathon conducted by Devpost . Theme of this projec
 this app give mental support , physical health support , Academic counselling , online safety, and community forums. 
 
 1.Mental health support -   We offer access to mental health resources, including counseling services, hotlines, and peer support groups We encourage open conversations about mental health and work to reduce it.
-
 2. Online safety -  We Provide Teach digital literacy and responsible online behavior to help young people navigate the internet safely and Promote cybersecurity practices to protect against online threats and cyberbullying.
-
 3. Physical health  - Promote a balanced diet and regular physical activity. Encourage adequate sleep and stress management practices.
-
 4.Education and career guidance - We offer career counseling and guidance to help youth make informed choices about their future and Support skill development and job readiness.
 
 ### [Watch Tutorial On Youtube.](https://youtu.be/knGk9aUr4Do)
